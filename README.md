@@ -8,3 +8,4 @@ I use:
 1. Sway (Tiling Window)
 2. Waybar (The bar thing at the top)
 3. kitty + Challenger Deep (Terminal)
+4. [Homura Akemi Wallpaper](https://www.pixel4k.com/homura-akemi-from-mahou-shoujo-madoka-magica-4k-142492.html)
