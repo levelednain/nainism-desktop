@@ -1,2 +1,1 @@
-# My Ricing Dotfiles
-Check the branches please
+# My dwm source codes
