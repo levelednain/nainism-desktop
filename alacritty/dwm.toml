@@ -1,0 +1,16 @@
+general.import = ["/home/nain/.config/alacritty/themes/gruvboxDark.toml"]
+
+[env]
+WINIT_X11_SCALE_FACTOR = "1"
+
+[window]
+padding = { x = 20, y = 20}
+dynamic_padding = true
+
+[font]
+size = 12 
+
+[font.normal]
+family = "UnifontExMono"
+
+
