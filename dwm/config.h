@@ -1,27 +1,28 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 3;        /* border pixel of windows */
-static const unsigned int snap      = 0;       /* snap pixel */
-static const unsigned int gappih    = 5;       /* horiz inner gap between windows */
-static const unsigned int gappiv    = 5;       /* vert inner gap between windows */
-static const unsigned int gappoh    = 10;       /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov    = 5;       /* vert outer gap between windows and screen edge */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
+static const unsigned int snap      = 32;       /* snap pixel */
+static const unsigned int gappih    = 10;       /* horiz inner gap between windows */
+static const unsigned int gappiv    = 10;       /* vert inner gap between windows */
+static const unsigned int gappoh    = 30;       /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov    = 30;       /* vert outer gap between windows and screen edge */
 static const int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
-static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
-static const unsigned int systrayonleft = 0;    /* 0: systray in the right corner, >0: systray on left of status text */
-static const unsigned int systrayspacing = 2;   /* systray spacing */
-static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
+static const unsigned int systraypinning = 0; /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
+static const unsigned int systrayonleft = 0; /* 0: systray in the right corner, >0: systray on left of status text */
+static const unsigned int systrayspacing = 2; /* systray spacing */
+static const unsigned int systrayiconsize = 13; /* systray icon size in px */
+static const int systraypinningfailfirst = 1; /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int showsystray        = 0;        /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Iosevka:size=12" };
-static const char dmenufont[]       = "Iosevka:size=12";
-static const char col_gray1[]       = "#1d2021";
-static const char col_gray2[]       = "#928374";
+static const char *fonts[]          = { "ZedMono Nerd Font:size=12" };
+static const char dmenufont[]       = "ZedMono Nerd Font:size=12";
+static const char col_gray1[]       = "#282828";
+static const char col_gray2[]       = "#282828";
 static const char col_gray3[]       = "#ebdbb2";
 static const char col_gray4[]       = "#282828";
-static const char col_cyan[]        = "#d3869b";
+static const char col_cyan[]        = "#ebdbb2";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -80,6 +81,7 @@ static const char *flameshot[] = { "flameshot", "gui", NULL };
 
 #include <X11/XF86keysym.h>
 #include "movestack.c"
+
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
@@ -107,6 +109,8 @@ static const Key keys[] = {
 	{ MODKEY|Mod4Mask,              XK_o,      incrohgaps,     {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_y,      incrovgaps,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_o,      incrovgaps,     {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_j,      movestack,      {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_k,      movestack,      {.i = -1 } },
 	{ MODKEY,                       XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
@@ -131,14 +135,13 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
-	{ 0, XF86XK_AudioMute, 		spawn,			   {.v = mutecmd } },
+
+	{ 0, XF86XK_AudioMute, 			spawn,			   {.v = mutecmd } },
 	{ 0, XF86XK_AudioLowerVolume, 	spawn,			   {.v = voldowncmd } },
 	{ 0, XF86XK_AudioRaiseVolume, 	spawn,			   {.v = volupcmd } },
 	{ 0, XF86XK_MonBrightnessUp, 	spawn,			   {.v = brupcmd} },
 	{ 0, XF86XK_MonBrightnessDown, 	spawn,			   {.v = brdowncmd} },
-	{ 0, 				XK_Print,  spawn,	   {.v = flameshot} },
-	{ MODKEY|ShiftMask, 		XK_j, 	   movestack,      {.i = +1 } },
-	{ MODKEY|ShiftMask, 		XK_k, 	   movestack,      {.i = -1 } },
+	{ 0, XK_Print,  				spawn, 				{.v = flameshot} },
 };
 
 /* button definitions */

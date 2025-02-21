@@ -65,9 +65,9 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-	{ wifi_perc, " NET: %s% | ",		"wlan0" },
-	{ run_command, "BCKL: %s/255 | ",		"cat /sys/class/backlight/amdgpu_bl1/brightness"},
-	{ run_command, "VOL: %s% | ",		"pamixer --get-volume"},
-	{ battery_perc, "BAT: %s% | ", 	"BAT0" },
-	{ datetime, "%s",           	"%a, %d %b | %R " },
+	{ wifi_perc, " NET: %s% |",		"wlp1s0" },
+	{ run_command, " BCKL: %s |",		"cat /sys/class/backlight/amdgpu_bl1/brightness"},
+	{ run_command, " VOL: %s% |",		"pamixer --get-volume"},
+	{ battery_perc, " BAT: %s% |", 	"BAT0" },
+	{ datetime, "%s",           	" %a, %d %b | %R" },
 };
