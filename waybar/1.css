@@ -1,5 +1,5 @@
 * {
-	font-family: "Iosevka";
+	font-family: "ZedMono Nerd Font";
 	font-size: 16px;
 }
 
@@ -19,7 +19,7 @@ workspaces {
 	margin-bottom: 2px;
 	color: #ebdbb2;
 
-	border-radius: 0px;
+	border-radius: 2px;
 }
 
 #workspaces button:hover {
@@ -51,7 +51,7 @@ workspaces {
 	padding-right: 15px;
 	padding-left: 15px;
 
-	border-radius: 0px;
+	border-radius: 2px;
 }
 
 #pulseaudio {
@@ -61,7 +61,7 @@ workspaces {
 	padding-right: 15px;
 	padding-left: 15px;
 
-	border-radius: 0px;
+	border-radius: 2px;
 }
 
 #backlight {
@@ -71,7 +71,7 @@ workspaces {
 	padding-right: 15px;
 	padding-left: 15px;
 
-	border-radius: 0px;
+	border-radius: 2px;
 }
 
 #clock {
@@ -81,7 +81,7 @@ workspaces {
 	padding-right: 15px;
 	padding-left: 15px;
 
-	border-radius: 0px;
+	border-radius: 2px;
 }
 
 #battery {
@@ -91,7 +91,7 @@ workspaces {
 	padding-right: 15px;
 	padding-left: 15px;
 
-	border-radius: 0px;
+	border-radius: 2px;
 }
 
 #tray {
@@ -100,5 +100,5 @@ workspaces {
 	padding-right: 15px;
 	padding-left: 15px;
 
-	border-radius: 0px;
+	border-radius: 2px;
 }

@@ -91,7 +91,7 @@
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": "BCKL {percent}%",
+        "format": "BCKL: {percent}%",
     },
     "battery": {
         "states": {
@@ -99,7 +99,7 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "BAT {capacity}%",
+        "format": "BAT: {capacity}%",
     },
     "battery#bat2": {
         "bat": "BAT2"
@@ -117,9 +117,9 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "NET WLAN", 
-        "format-ethernet": "NET ETH",
-        "format-disconnected": "NET DISC",
+        "format-wifi": "NET: WLAN", 
+        "format-ethernet": "NET: ETH",
+        "format-disconnected": "NET: DISC",
         "tooltip-format": "{essid} | {ipaddr}/{cidr}"
     },
     "pulseaudio": {
