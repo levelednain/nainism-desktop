@@ -1,0 +1,93 @@
+* {
+	font-family: "Iosevka";
+	font-size: 16px;
+}
+
+window#waybar {
+	background-color: transparent;
+}
+
+#workspaces button {
+	background-color: alpha(#282828, 0.5);
+	padding: 5px 10px 5px 10px;
+	margin-right: 5px;
+	color: #ebdbb2;
+
+	border-radius: 5px;
+}
+
+#workspaces button:hover {
+	background: #ebdbb2;
+	color: #282828;
+	box-shadow: inherit;
+	text-shadow: inherit;
+	border: transparent;
+}
+
+#workspaces button.active {
+	background-color: #b5c9c2;
+	color: #282828;
+}
+
+#workspaces button.urgent {
+	background-color: #fabd2f;
+	color: #282828;
+}
+
+#network {
+	background-color: alpha(#282828, 0.5);
+	color: #ebdbb2;
+	padding-right: 10px;
+	padding-left: 10px;
+
+	border-radius: 5px;
+}
+
+#pulseaudio {
+	background-color: alpha(#282828, 0.5);
+	color: #ebdbb2;
+
+	padding-right: 10px;
+	padding-left: 10px;
+
+	border-radius: 5px;
+}
+
+#backlight {
+	background-color: alpha(#282828, 0.5);
+	color: #ebdbb2;
+
+	padding-right: 10px;
+	padding-left: 10px;
+
+	border-radius: 5px;
+}
+
+#clock {
+	background-color: alpha(#282828, 0.5);
+	color: #ebdbb2;
+
+	padding-right: 10px;
+	padding-left: 10px;
+
+	border-radius: 5px;
+}
+
+#battery {
+	background-color: alpha(#282828, 0.5);
+	color: #ebdbb2;
+
+	padding-right: 10px;
+	padding-left: 10px;
+
+	border-radius: 5px;
+}
+
+#tray {
+	background-color: alpha(#282828, 0.5);
+
+	padding-right: 10px;
+	padding-left: 10px;
+
+	border-radius: 5px;
+}

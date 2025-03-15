@@ -1,0 +1,55 @@
+{
+    "height": 30, // Waybar height (to be removed for auto height)
+    "spacing": 5, // Gaps between modules (4px)
+    "margin-top": 10,
+    "margin-right": 10,
+    "margin-left": 10,
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+    ],
+    "modules-right": [
+        "network",
+	"pulseaudio",
+        "backlight",
+        "battery",
+        "clock",
+        "tray"
+    ],
+    "tray": {
+        "spacing": 10
+    },
+    "clock": {
+        "format": "   {:%a, %d %b | %H:%M}"
+    },
+    "backlight": {
+        "format": "󰳲  {percent}%"
+    },
+    "battery": {
+        "states": {
+            "good": 90,
+            "warning": 20,
+            "critical": 10
+        },
+        "format": "{icon} {capacity}%",
+	"format-full": "󱈏  {capacity}%",
+	"format-charging": "󰂄 {capacity}%",
+	"format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󱈏 "]
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "  WLAN", 
+        "format-ethernet": "  ETH",
+        "format-disconnected": "  DISC",
+        "tooltip-format": "{essid} | {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "  {volume}%",
+        "format-muted": "  MUTED",
+	"format-bluetooth": " {volume}%",
+        "format-bluetooth-muted": " MUTED",
+        "on-click": "pavucontrol"
+    }
+}
