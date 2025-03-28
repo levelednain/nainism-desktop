@@ -1,0 +1,14 @@
+Print
+    flameshot gui
+
+{XF86MonBrightnessUp, XF86MonBrightnessDown}
+    brightnessctl {set +10%, set 10%-}
+
+{XF86AudioRaiseVolume, XF86AudioLowerVolume}
+    pamixer {--increase 1, --decrease 1}
+
+XF86AudioMute
+    pamixer --toggle-mute
+
+super + escape
+    pkill -USR1 -x sxhkd

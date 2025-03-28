@@ -64,10 +64,10 @@ static const char unknown_str[] = "n/a";
  * wifi_perc           WiFi signal in percent          interface name (wlan0)
  */
 static const struct arg args[] = {
-	/* function format          argument */
-	{ wifi_perc, " NET: %s% |",		"wlp1s0" },
-	{ run_command, " BCKL: %s |",		"cat /sys/class/backlight/amdgpu_bl1/brightness"},
-	{ run_command, " VOL: %s% |",		"pamixer --get-volume"},
-	{ battery_perc, " BAT: %s% |", 	"BAT0" },
-	{ datetime, "%s",           	" %a, %d %b | %R" },
+	/* function     format              argument */
+	{ wifi_perc,    " NET: %s% |",		    "wlp1s0" },
+	{ run_command,  " BCKL: %s% |",		    "brightnessctl -m -d amdgpu_bl1 | awk -F, '{print substr($4, 0, length($4)-1)}'"},
+	{ run_command,  " VOL: %s% |",		    "pamixer --get-volume"},
+	{ battery_perc, " BAT: %s% |", 	        "BAT0" },
+	{ datetime,     " %s",           	"%a, %d %b | %R" },
 };
